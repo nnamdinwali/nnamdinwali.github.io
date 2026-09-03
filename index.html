@@ -75,7 +75,9 @@
       width: 48px; height: 48px; border-radius: 12px;
       background: #18181b; border: 1px solid var(--border);
       display: grid; place-items: center; font-size: 1.4rem; flex-shrink: 0;
+      object-fit: cover;
     }
+    img.game-icon { padding: 0; display: block; }
     .game h2 { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.02em; }
     .game .tag { font-size: 0.75rem; color: #71717a; margin-top: 0.15rem; }
     .game p { color: var(--muted); font-size: 0.9rem; flex: 1; }
@@ -132,7 +134,7 @@
     <section class="games">
       <article class="game">
         <div class="game-top">
-          <div class="game-icon" aria-hidden="true">🐔</div>
+          <img class="game-icon" src="assets/road-runner.jpg" alt="Road Runner" width="48" height="48" />
           <div>
             <h2>Road Runner</h2>
             <div class="tag">Endless runner · Android</div>
@@ -144,13 +146,12 @@
         </p>
         <div class="game-actions">
           <a class="btn btn-primary" href="https://appgallery.cloud.huawei.com/ag/n/app/C118335023?locale=en_US" target="_blank" rel="noopener">AppGallery</a>
-          <a class="btn btn-ghost" href="https://www.amazon.com/dp/B0H6CBMLRB" target="_blank" rel="noopener">Amazon</a>
         </div>
       </article>
 
       <article class="game">
         <div class="game-top">
-          <div class="game-icon" aria-hidden="true">🤖</div>
+          <img class="game-icon" src="assets/robo-racer.png" alt="Robo Racer" width="48" height="48" />
           <div>
             <h2>Robo Racer</h2>
             <div class="tag">Racing · Android</div>
