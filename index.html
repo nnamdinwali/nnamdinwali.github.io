@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Nnamdi Nwali — independent game developer. Road Runner: dodge traffic, collect coins, unlock animals." />
+  <meta name="description" content="Nnamdi Nwali — independent game developer. Road Runner and Robo Racer on AppGallery." />
   <title>Nnamdi Nwali — Game Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,12 +27,12 @@
       min-height: 100vh;
     }
     a { color: inherit; text-decoration: none; }
-    .wrap { width: min(920px, 92vw); margin: 0 auto; }
+    .wrap { width: min(880px, 92vw); margin: 0 auto; }
 
     header {
       position: sticky; top: 0; z-index: 10;
       border-bottom: 1px solid var(--border);
-      background: rgba(10, 10, 11, 0.9);
+      background: rgba(10, 10, 11, 0.92);
       backdrop-filter: blur(12px);
     }
     .nav {
@@ -43,76 +43,72 @@
     .nav-links { display: flex; gap: 1.25rem; font-size: 0.875rem; color: var(--muted); }
     .nav-links a:hover { color: var(--text); }
 
-    main { padding: 4rem 0 5rem; }
+    main { padding: 3.25rem 0 4.5rem; }
 
-    .hero { text-align: center; margin-bottom: 3.5rem; }
-    .badge {
-      display: inline-block; margin-bottom: 1rem;
-      padding: 0.35rem 0.75rem; border-radius: 999px;
-      border: 1px solid var(--border); background: var(--surface);
-      font-size: 0.75rem; color: var(--muted); font-weight: 500;
+    .intro { margin-bottom: 2.75rem; }
+    .intro h1 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700; letter-spacing: -0.03em; line-height: 1.15;
+      margin-bottom: 0.5rem;
     }
-    .hero h1 {
-      font-size: clamp(2.25rem, 6vw, 3.25rem);
-      font-weight: 700; letter-spacing: -0.04em; line-height: 1.1;
-      margin-bottom: 1rem;
+    .intro p { color: var(--muted); max-width: 36rem; font-size: 1rem; }
+
+    .section-label {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #71717a; margin-bottom: 1rem;
     }
-    .hero p {
-      max-width: 36rem; margin: 0 auto 1.75rem;
-      color: var(--muted); font-size: 1.05rem;
+
+    .games { display: grid; gap: 1rem; margin-bottom: 3rem; }
+    @media (min-width: 640px) {
+      .games { grid-template-columns: 1fr 1fr; }
     }
-    .cta {
+
+    .game {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      padding: 1.35rem 1.4rem 1.4rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
+    }
+    .game-top { display: flex; align-items: flex-start; gap: 0.9rem; }
+    .game-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: #18181b; border: 1px solid var(--border);
+      display: grid; place-items: center; font-size: 1.4rem; flex-shrink: 0;
+    }
+    .game h2 { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.02em; }
+    .game .tag { font-size: 0.75rem; color: #71717a; margin-top: 0.15rem; }
+    .game p { color: var(--muted); font-size: 0.9rem; flex: 1; }
+    .game-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
+
+    .btn {
       display: inline-flex; align-items: center; justify-content: center;
-      padding: 0.85rem 1.5rem; border-radius: 10px;
-      background: var(--accent); color: #fff; font-weight: 600; font-size: 0.95rem;
-      transition: background 0.15s ease;
+      padding: 0.55rem 0.95rem; border-radius: 8px;
+      font-size: 0.85rem; font-weight: 600;
     }
-    .cta:hover { background: var(--accent-hover); }
-    .cta-secondary {
-      display: inline-flex; margin-left: 0.75rem;
-      padding: 0.85rem 1.25rem; border-radius: 10px;
-      border: 1px solid var(--border); color: var(--text);
-      font-weight: 500; font-size: 0.95rem;
-      background: transparent;
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-ghost {
+      border: 1px solid var(--border); color: var(--text); background: transparent;
     }
-    .cta-secondary:hover { border-color: #52525b; background: var(--surface); }
-    .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
-
-    .features {
-      display: grid; gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      margin-bottom: 3.5rem;
-    }
-    .feature {
-      padding: 1.5rem; border: 1px solid var(--border);
-      border-radius: 14px; background: var(--surface);
-    }
-    .feature .icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
-    .feature h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
-    .feature p { font-size: 0.9rem; color: var(--muted); }
+    .btn-ghost:hover { border-color: #52525b; background: #18181b; }
 
     .about {
-      padding: 1.75rem 0 0;
       border-top: 1px solid var(--border);
-      text-align: center;
+      padding-top: 2rem;
     }
-    .about h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
-    .about p { color: var(--muted); font-size: 0.95rem; max-width: 32rem; margin: 0 auto; }
+    .about h2 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .about p { color: var(--muted); font-size: 0.95rem; max-width: 34rem; }
 
     footer {
       border-top: 1px solid var(--border);
-      padding: 2rem 0 2.5rem;
+      padding: 1.75rem 0 2.25rem;
       text-align: center; font-size: 0.85rem; color: var(--muted);
     }
     footer .name { color: var(--text); font-weight: 500; margin-bottom: 0.35rem; }
-    footer a { color: var(--muted); margin: 0 0.5rem; }
+    footer a { color: var(--muted); margin: 0 0.45rem; }
     footer a:hover { color: var(--text); }
-    footer .copy { margin-top: 0.75rem; font-size: 0.8rem; color: #71717a; }
-
-    @media (max-width: 480px) {
-      .cta-secondary { margin-left: 0; width: 100%; }
-      .cta { width: 100%; }
-    }
+    footer .copy { margin-top: 0.65rem; font-size: 0.8rem; color: #71717a; }
   </style>
 </head>
 <body>
@@ -127,46 +123,54 @@
   </header>
 
   <main class="wrap">
-    <section class="hero">
-      <span class="badge">Endless runner · Android</span>
-      <h1>Road Runner</h1>
-      <p>
-        Dodge oncoming cars, collect coins, and unlock animals in the shop.
-        Start as the chicken and see who else is waiting on the highway.
-      </p>
-      <div class="cta-row">
-        <a class="cta" href="https://appgallery.cloud.huawei.com/ag/n/app/C118335023?locale=en_US&source=appshare&subsource=C118335023&shareTo=com.android.bluetooth&shareFrom=appmarket&shareIds=a945978b83e745fb83ddb66663be7232_com.android.bluetooth&callType=SHARE" target="_blank" rel="noopener">
-          Get it on AppGallery
-        </a>
-        <a class="cta-secondary" href="https://www.amazon.com/dp/B0H6CBMLRB" target="_blank" rel="noopener">
-          Amazon Appstore
-        </a>
-      </div>
+    <section class="intro">
+      <h1>Independent game developer</h1>
+      <p>Casual mobile games published on AppGallery and Amazon Appstore. Built for quick sessions and simple controls.</p>
     </section>
 
-    <section class="features">
-      <article class="feature">
-        <div class="icon" aria-hidden="true">🚗</div>
-        <h3>Dodge Traffic</h3>
-        <p>React fast and weave through endless waves of oncoming cars.</p>
+    <p class="section-label">Games</p>
+    <section class="games">
+      <article class="game">
+        <div class="game-top">
+          <div class="game-icon" aria-hidden="true">🐔</div>
+          <div>
+            <h2>Road Runner</h2>
+            <div class="tag">Endless runner · Android</div>
+          </div>
+        </div>
+        <p>
+          Dodge oncoming cars, collect coins, and unlock animals in the shop.
+          Start as the chicken and see who else is waiting on the highway.
+        </p>
+        <div class="game-actions">
+          <a class="btn btn-primary" href="https://appgallery.cloud.huawei.com/ag/n/app/C118335023?locale=en_US" target="_blank" rel="noopener">AppGallery</a>
+          <a class="btn btn-ghost" href="https://www.amazon.com/dp/B0H6CBMLRB" target="_blank" rel="noopener">Amazon</a>
+        </div>
       </article>
-      <article class="feature">
-        <div class="icon" aria-hidden="true">🪙</div>
-        <h3>Collect Coins</h3>
-        <p>Build your stash as you run and spend it in the in-game shop.</p>
-      </article>
-      <article class="feature">
-        <div class="icon" aria-hidden="true">🐔</div>
-        <h3>Unlock Animals</h3>
-        <p>Start as the default chicken and unlock new characters over time.</p>
+
+      <article class="game">
+        <div class="game-top">
+          <div class="game-icon" aria-hidden="true">🤖</div>
+          <div>
+            <h2>Robo Racer</h2>
+            <div class="tag">Racing · Android</div>
+          </div>
+        </div>
+        <p>
+          Robot racing action — race, react, and push for a better run.
+          Available on AppGallery.
+        </p>
+        <div class="game-actions">
+          <a class="btn btn-primary" href="https://appgallery.cloud.huawei.com/ag/n/app/C118436903?locale=en_US" target="_blank" rel="noopener">AppGallery</a>
+        </div>
       </article>
     </section>
 
     <section class="about">
-      <h2>About the developer</h2>
+      <h2>About</h2>
       <p>
-        Independent games from Nigeria. Road Runner is built for quick sessions,
-        simple controls, and a long runway of high scores.
+        Nnamdi Nwali is an independent game developer based in Nigeria.
+        Focused on approachable mobile games players can pick up in minutes.
       </p>
     </section>
   </main>
